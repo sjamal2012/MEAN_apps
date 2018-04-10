@@ -1,0 +1,65 @@
+*{
+    /* padding: 0px;
+    margin: 0px; */
+    font-family: "Georgia";
+}
+body{
+    width:1000px;
+    margin:auto;
+    text-align: center;
+}
+h3{
+    margin-top: 90px;
+    margin-left: 10px;
+    margin-right: 10px;
+    vertical-align: middle;
+    border:2px solid silver;
+    border-radius: 40%;
+    background-color: white;
+}
+div{
+    width:200px;
+    height:200px;
+    display:inline-block;
+    border: 2px solid black;
+    margin:20px;
+}
+div.house_stark{
+    background-image: url("http://res.cloudinary.com/lebspec/image/upload/v1516233356/house_stark_zllabj.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.house_targaryen{
+    background-image: url("http://res.cloudinary.com/lebspec/image/upload/v1516233361/house_targaryen_z45k1u.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.house_lannister{
+    background-image: url("http://res.cloudinary.com/lebspec/image/upload/v1516233363/house_lannister_ajan04.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.house_baratheon{
+    background-image: url("http://res.cloudinary.com/lebspec/image/upload/v1516233365/house_baratheon_zvmlnq.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+div.details{
+    width: 500px;
+    height: 300px;
+}
+p{
+    text-align: left;
+    padding-left: 20px;
+}
+h4{
+    vertical-align: top;
+    display:inline-block;
+    background-color: white;
+    margin-top: -11px;
+    padding: 0px 5px;
+}

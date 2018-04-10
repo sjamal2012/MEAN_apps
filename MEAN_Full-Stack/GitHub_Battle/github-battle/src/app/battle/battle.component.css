@@ -1,0 +1,51 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+form{
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  height: 142px;
+  margin: 0px 10px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  position: static;
+}
+.player{
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  height: 142px;
+  margin: 0px 10px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  position: static;
+}
+input[type='submit']{
+  width: 70%;
+  background-color: blue;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 1px 2px 2px black;
+}
+img{
+  display: inline-block;
+  height: 80%;
+}
+.button{
+  text-align: center;
+}
+.battle_button{
+  outline: none;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: rgb(255, 199, 95);
+  width: 80%;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px black;
+  display: inline-block;
+}

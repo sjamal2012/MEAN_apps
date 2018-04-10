@@ -1,0 +1,28 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+fieldset{
+  width: 1000px;
+}
+.seperator{
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  width: 10px;
+}
+a{
+  font-weight: bold;
+  color: rgb(117, 80, 187);
+  font-size: 20px;
+}
+h1{
+  display: inline-block;
+  width: 65%;
+}
+div{
+  display:inline-block;
+  width: 30%;
+  padding-left: 30px;
+}

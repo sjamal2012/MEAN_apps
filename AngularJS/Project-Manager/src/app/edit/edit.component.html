@@ -1,0 +1,52 @@
+<div class="wrapper">
+    <h1>Edit Product</h1>
+    <form #formData='ngForm' (submit)='update(formData.value)'>
+      <table>
+        <tr>
+          <td><label for="title">Title</label></td>
+          <td><input
+            name='title'
+            type="text"
+            [(ngModel)]='product.title'
+            #titleData='ngModel'
+            required
+            minlength="4"
+            [value]='product.title'
+            ></td>
+        </tr>
+        <tr>
+          <td><label for="price">Price($)</label></td>
+          <td><input
+            name='price'
+            type="number"
+            [(ngModel)]='product.price'
+            #priceData='ngModel'
+            required
+            [value]='product.price'
+            ></td>
+        </tr>
+        <tr>
+          <td><label for="img">Image URL</label></td>
+          <td><input
+            name='img'
+            type="text"
+            [(ngModel)]='product.img'
+            [value]='product.img'
+            >
+          </td>
+        </tr>
+      </table>
+      <p class='submit'>
+        <input type="submit" [disabled]='!formData.valid' value="Update">
+        <button (click)='delete()'>Delete</button>
+      </p>
+      
+    </form>
+    <div class="errors">
+      <p *ngIf='!titleData.valid'>must be at least 4 characters</p>
+      <p class='check' *ngIf='titleData.valid'>✔</p>
+      <p *ngIf='!priceData.valid'>this field is required</p>
+      <p class='check' *ngIf='priceData.valid'>✔</p>
+    </div>
+  </div>
+  

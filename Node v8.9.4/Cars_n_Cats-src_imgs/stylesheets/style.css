@@ -1,0 +1,11 @@
+body{
+    width: 970px;
+    font-family: Georgia;
+    color: teal;
+    margin:auto;
+    text-align: center;
+}
+span{
+    color:black;
+    font-style: italic;
+}

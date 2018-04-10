@@ -1,0 +1,27 @@
+<form *ngIf='!controller.player_1' #formData1='ngForm' (submit)='onSubmit({"player": 1,"username":formData1.value.user1})'>
+  <h2>Player 1</h2>
+  <label for="user">GitHub Username: </label>
+  <input type="text" name="user1" [(ngModel)]="user1" required>
+  <br><br>
+  <input type="submit" [disabled]='!formData1.valid' value="Get User">
+</form>
+<div class='player' *ngIf='controller.player_1'>
+  <img src="http://res.cloudinary.com/lebspec/image/upload/v1521051661/bust-in-silhouette_1f464_rhjpfs.png" alt="user"><br>
+  {{ user_1 }}
+</div>
+<form *ngIf='!controller.player_2'#formData2='ngForm' (submit)='onSubmit({"player": 2,"username":formData2.value.user2})'>
+  <h2>Player 2</h2>
+  <label for="user">GitHub Username: </label>
+  <input type="text" name="user2" [(ngModel)]="user2" required>
+  <br><br>
+  <input type="submit" [disabled]='!formData2.valid' value="Get User">
+</form>
+<div class='player' *ngIf='controller.player_2'>
+  <img src="http://res.cloudinary.com/lebspec/image/upload/v1521051661/bust-in-silhouette_1f464_rhjpfs.png" alt="user"><br>
+  {{ user_2 }}
+</div>
+<div class='button'>
+  <button class='battle_button' [routerLink]="['results']" *ngIf='controller.player_1 && controller.player_2' (click)='battle({"user_1": user1, "user_2": user2})'>BATTLE!</button>
+</div>
+ 
+

@@ -1,0 +1,39 @@
+*{
+    font-family: Georgia;
+    margin:0px;
+    padding:0px;
+}
+body{
+    margin:auto;
+    text-align: center;
+}
+.wrapper{
+    display:inline-block;
+    margin:20px;
+    padding:20px;
+    border: 2px solid black;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px grey;
+}
+p{
+    margin:10px 0px;
+    font-size: 18px;
+    font-style: italic;
+}
+button{
+    width: 50px;
+    outline: none;
+    padding: 5px;
+    margin:auto;
+    margin-bottom: 5px;
+    border: 2px solid black;
+    background: linear-gradient(silver, white);
+    border-radius: 50%;
+}
+.refresh{
+    padding: 5px;
+    width: 100px;
+    font-weight: bold;
+    border-radius: 10px;
+    display:block;
+}

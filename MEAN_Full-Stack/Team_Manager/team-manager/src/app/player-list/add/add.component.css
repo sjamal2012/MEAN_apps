@@ -1,0 +1,40 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+form{
+  width: 90%;
+  margin: auto;
+}
+td{
+  font-size: 20px;
+  width: 200px;
+}
+.check{
+  display: inline-block;
+  line-height: 100%;
+  color: rgb(22, 102, 89);
+  font-size: 13px;
+  width: 200px;
+  margin: 12px 0px;
+}
+.error{
+  display: inline-block;
+  line-height: 100%;
+  width: 200px;
+  font-size: 13px;
+  margin: 12px 0px;
+  color: white;
+}
+label{
+  width: 100px;
+}
+input[type='text']{
+  width: 350px;
+}
+p.submit{
+  width: 100%;
+  text-align: center;
+}
+form.ng-dirty p{
+  color: red;
+}

@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Deck of Cards</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        class Deck {
+            constructor(){
+                var self = this
+                this.deck = function(){
+                    let deck = []
+                    for (var s = 0; s < 4; s++){
+                        let suit = ""
+
+                        if (s == 0) {
+                            suit = "hearts"
+                        }
+                        else if (s == 1) {
+                            suit = "spades"
+                        }
+                        else if (s == 2) {
+                            suit = "clubs"
+                        }
+                        else if (s == 3) {
+                            suit = "daimonds"
+                        }
+                        for (var i = 1; i < 14; i++) {
+                            if (i == 1) {
+                                deck.push(`ace of ${suit}`)
+                            }
+                            else if (i == 11) {
+                                deck.push(`jack of ${suit}`)
+                            }
+                            else if (i == 12) {
+                                deck.push(`queen of ${suit}`)
+                            }
+                            else if (i == 13) {
+                                deck.push(`king of ${suit}`)
+                            }
+                            else {
+                                deck.push(`${i} of ${suit}`)
+                            }
+                        }
+                    }
+                    return deck
+                }
+            }
+
+            shuffleDeck(){
+                let std_deck = this.deck()
+                let shuffled_deck = []
+                for (var i = 0; i < 52; i++) {
+                    shuffled_deck.push(std_deck[Math.floor(Math.random()*std_deck.length)])
+                    std_deck.pop(std_deck[Math.floor(Math.random()*std_deck.length)])
+                }
+                this.deck = shuffled_deck
+                return this.deck
+            }
+
+            resetDeck(){
+                let deck = []
+                for (var s = 0; s < 4; s++){
+                    let suit = ""
+
+                    if (s == 0) {
+                        suit = "hearts"
+                    }
+                    else if (s == 1) {
+                        suit = "spades"
+                    }
+                    else if (s == 2) {
+                        suit = "clubs"
+                    }
+                    else if (s == 3) {
+                        suit = "daimonds"
+                    }
+                    for (var i = 1; i < 14; i++) {
+                        if (i == 1) {
+                            deck.push(`ace of ${suit}`)
+                        }
+                        else if (i == 11) {
+                            deck.push(`jack of ${suit}`)
+                        }
+                        else if (i == 12) {
+                            deck.push(`queen of ${suit}`)
+                        }
+                        else if (i == 13) {
+                            deck.push(`king of ${suit}`)
+                        }
+                        else {
+                            deck.push(`${i} of ${suit}`)
+                        }
+                    }
+                }
+                this.deck = deck
+                return this.deck
+            }
+
+            dealCard(){
+                let index = Math.floor(Math.random()*this.deck.length)
+                let dealt_card = this.deck[index]
+                this.deck.splice(index, 1)
+                return dealt_card
+            }
+        }
+        class Player extends Deck{
+            constructor(name){
+                super();
+                this.name = name
+                this.hand = function(){
+                    let hand = []
+                    let deck = Deck.prototype.resetDeck();
+                    for (var i = 0; i < 5; i++) {
+                        let rand_n = Math.floor(Math.random()*deck.length)
+                        hand.push(deck[rand_n])
+                        deck.splice(rand_n, 1)
+                    }
+                    this.new_deck = deck;
+                    this.hand = hand
+                    return hand;
+                }
+            }
+
+            takeCard(){
+                let rand_n = Math.floor(Math.random()*this.new_deck.length)
+                let card = this.new_deck[rand_n];
+                this.card = card;
+                this.hand.push(this.new_deck[rand_n]);
+                this.new_deck.splice(rand_n, 1);
+
+                return this.hand;
+            }
+
+            disCard(){
+                let rand_deck_n = Math.floor(Math.random()*this.new_deck.length)
+                let rand_hand_n = Math.floor(Math.random()*this.hand.length)
+                let card = this.hand[rand_hand_n]
+                this.card = card;
+                this.hand.splice(rand_hand_n, 1);
+                this.new_deck.splice(rand_deck_n, 0, card)
+
+                return this.hand
+            }
+        }
+        const newDeck = new Deck()
+        const newPlayer = new Player("Dex")
+        // shuffles
+            console.log("Shuffle Deck: ");
+            console.log(newDeck.shuffleDeck());
+        // resets
+            console.log("Reset Deck: ");
+            console.log(newDeck.resetDeck());
+        // deals
+            console.log("Deal card: ");
+            console.log("    " + newDeck.dealCard());
+            console.log("    " + newDeck.dealCard());
+        //deck minus dealt cards
+        console.log("Updated Deck: ");
+        console.log(newDeck.deck);
+
+        //player hand
+        console.log("Player hand: ");
+        console.log(newPlayer.hand());
+        console.log(newPlayer.new_deck);
+        // player draws card to previous hand
+        console.log("Player draw: ");
+        newPlayer.takeCard();
+        console.log("    " + newPlayer.card);
+        console.log(newPlayer.hand);
+        console.log(newPlayer.new_deck);
+        // player discards a random card
+        console.log("Player discard: ");
+        newPlayer.disCard();
+        console.log("    " + newPlayer.card);
+        console.log(newPlayer.hand);
+        console.log(newPlayer.new_deck);
+        </script>
+    </body>
+</html>

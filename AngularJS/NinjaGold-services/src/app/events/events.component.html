@@ -1,0 +1,5 @@
+<h2 class='header'>Activities:</h2>
+<hr>
+<div class = "activity">
+    <p *ngFor='let event of events.slice().reverse()'><span [ngClass]='event.win_loss'>You've {{ event.win_loss }} {{ event.gold }} gold! </span></p>
+</div>

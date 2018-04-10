@@ -1,0 +1,12 @@
+<h1>Rankings</h1>
+<div class='rankings'>
+  <div *ngFor='let player of users | orderBy: "score", let i = index'>
+    <h4>{{ i + 1 }}</h4>
+    <div class='player'>
+      <img src="http://res.cloudinary.com/lebspec/image/upload/v1521051661/bust-in-silhouette_1f464_rhjpfs.png" alt="user"><br>
+      {{ player.username }}
+    </div>
+    <h3>Score: {{ player.score }}</h3>
+    <hr>
+  </div>
+</div>

@@ -1,0 +1,13 @@
+<div class="wrapper">
+    <h1>Product List</h1>
+    <div class='product' *ngFor='let product of products; let i = index'>
+      <div class='img_wrap'>
+          <img [src]='product.img' [alt]="product.title">
+      </div>
+      <h2>{{ product.title }}</h2>
+      <h3>${{ product.price }}</h3>
+      <button (click)='edit(i)' class='edit'>EDIT</button>
+      <button (click)='delete(i)' class='delete'>Delete</button>
+    </div>
+</div>
+  

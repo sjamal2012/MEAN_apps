@@ -1,0 +1,8 @@
+<html>
+  <body>
+    <div class="wrapper">
+      <app-add-quote (newQuoteEmitter)='getQuote($event)'></app-add-quote>
+      <app-quotes-list [quotes]='quotes'></app-quotes-list>
+    </div>
+  </body>
+</html>

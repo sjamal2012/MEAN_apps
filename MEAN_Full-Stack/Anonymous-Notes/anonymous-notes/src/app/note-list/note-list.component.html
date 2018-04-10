@@ -1,0 +1,7 @@
+<fieldset>
+  <h2>Notes</h2>
+  <div class="note" *ngFor='let note of notes.reverse()'>
+    <p class="date">posted: {{ note.createdAt | date:'medium'}}</p>
+    <p>{{ note.content }}</p>
+  </div>
+</fieldset>

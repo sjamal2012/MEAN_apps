@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>JS Library</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+            var _ = {
+                each: function (array, callback){
+                    for (let i = 0; i < array.length; i++) {
+                        callback(array[i], i)
+                    }
+                },
+                map: function (array, callback){
+                    let new_arr = []
+                    for (var i = 0; i < array.length; i++) {
+                        new_arr.push(callback(array[i]))
+                    }
+                    console.log(new_arr);
+                },
+                reduce: function (array, callback){
+                    let init_product = 1;
+                    product = callback(array, init_product)
+                    console.log(product);
+                },
+                find: function (array, callback, mult_of_num){
+                    for (var i = 0; i < array.length; i++) {
+                        if (callback(array[i], mult_of_num) == true) {
+                            console.log(`${array[i]} is a multiple of 3!`);
+                        }
+                    }
+                },
+                filter: function (array, callback, mult_of_num){
+                    let new_arr = []
+                    for (var i = 0; i < array.length; i++) {
+                        if (callback(array[i], mult_of_num) == true) {
+                            new_arr.push(array[i])
+                        }
+                    }
+                    console.log(new_arr);
+                },
+                reject: function (array, callback, mult_of_num){
+                    let new_arr = []
+                    for (var i = 0; i < array.length; i++) {
+                        if (callback(array[i], mult_of_num) == false) {
+                            new_arr.push(array[i])
+                        }
+                    }
+                    console.log(new_arr);
+                }
+            }
+
+            function print_value(element, i){
+                console.log(`element: ${ element } and index: ${ i }`);
+            }
+            function multiply_each(element){
+                return (element*2)
+            }
+            function multiply_all(array, product){
+                for (var i = 0; i < array.length; i++) {
+                    product *= array[i];
+                }
+                return product
+            }
+            function multiple_of(element, num){
+                if ((element / num) % 1 === 0) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+
+            const stringArray = [1, 2, 6, 4, 1];
+
+            _.each(stringArray, print_value)
+            _.map(stringArray, multiply_each)
+            _.reduce(stringArray, multiply_all)
+            _.find(stringArray, multiple_of, 3)
+            _.filter(stringArray, multiple_of, 2)
+            _.reject(stringArray, multiple_of, 2)
+
+        </script>
+    </body>
+</html>

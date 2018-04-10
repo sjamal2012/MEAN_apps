@@ -1,0 +1,36 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4{
+  margin: 0px;
+  font-size: 20px;
+  display:inline-block;
+}
+.rankings{
+  padding: 10px;
+  border: 2px solid black;
+  height: 500px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+h3{
+  margin: 0px 0px 0px 30px;
+  text-align: center;
+  font-size: 40px;
+  display: inline-block;
+}
+.player{
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  height: 142px;
+  margin: 0px 10px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  position: static;
+}
+img{
+  display: inline-block;
+  height: 80%;
+}

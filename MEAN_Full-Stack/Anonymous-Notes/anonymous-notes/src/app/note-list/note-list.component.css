@@ -1,0 +1,15 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+fieldset{
+  margin: 10px 0px;
+}
+p.date{
+  text-align: right;
+  font-size: 12px;
+}
+div.note{
+  border: 2px solid silver;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}

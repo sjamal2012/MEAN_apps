@@ -1,0 +1,33 @@
+*{
+    /* padding: 0px;
+    margin: 0px; */
+    font-family: "Georgia";
+}
+body{
+    width:250px;
+    text-align: center;
+}
+div.inputs{
+    display:inline-block;
+    margin:auto;
+}
+div.display_name{
+    display:inline-block;
+    border: 2px solid black;
+    border-radius: 50px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+    background: linear-gradient(silver, white)
+}
+input{
+    display: block;
+    padding: 2px;
+    margin-bottom: 8px;
+}
+.full_name{
+    text-align: center;
+    font-weight: bold;
+    text-decoration: none;
+}

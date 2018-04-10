@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Survey</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+           // this triggers the connection event in our server!
+           var socket = io.connect();
+           // we'll write all the socket stuff after the above line!
+           $('button').click(function (){
+               name = document.getElementById("name").value;
+               loc = document.getElementById("loc").value;
+               language = document.getElementById("language").value;
+               comment = document.getElementById("comment").value;
+               let info_div = document.getElementById('server_info')
+               info_div.setAttribute("class","server_info")
+               socket.emit( "posting_form", {name: name, loc: loc, language: language, comment: comment});
+          });
+          socket.on( 'updated_message', function (data){
+              console.log("New message coming in!");
+              let msg = document.createElement('p')
+              msg.innerText = "You emitted the following info to the server: " + JSON.stringify(data);
+              $('#server_info').append(msg)
+          });
+          socket.on('random_number', function(data){
+              console.log("New number too!" + data.num);
+              let number = document.createElement('p');
+              number.innerText = "Your lucky number emitted by the server is " + data.num;
+              $('#server_info').append(number)
+          })
+       })
+   </script>
+    <body>
+        <div id="server_info">
+
+        </div>
+        <div class="show">
+            <h1>Input User Info</h1>
+            <div class="names">
+                <p>Your Name: </p>
+                <p>Dojo Location: </p>
+                <p>Favorite Language: </p>
+            </div>
+            <div class="inputs">
+                <p><input type='text' name='name'id="name"></p>
+                <p><select class="" name="loc" id="loc">
+                    <option value="Online">Online</option>
+                    <option value="San Jose">San Jose</option>
+                </select></p>
+                <p><select class="" name="language" id="language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select></p>
+            </div>
+
+            <p class="comment">Comment (optional):</p>
+            <p><textarea name="comment" id="comment"></textarea></p>
+            <p class="button"><button>Show User</button></p>
+        </div>
+    </body>
+</html>

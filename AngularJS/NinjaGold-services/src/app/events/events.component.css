@@ -1,0 +1,23 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  vertical-align: top;
+}
+.won{
+  color: green;
+}
+.earned{
+  color: green;
+}
+.lost{
+  color: red;
+}
+input{
+  padding: 2px 5px;
+}
+div.activity{
+  width:auto;
+  min-width: 530px;
+  height: 300px;
+  overflow-y: auto;
+  margin-bottom: 20px;
+}

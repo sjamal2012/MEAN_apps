@@ -1,0 +1,15 @@
+<html>
+    <head>
+      <title>Retro Barcode</title>
+    </head>
+    <body>
+      <div class='wrapper'>
+        <h1>TimeZone US</h1>
+        <div class="border" *ngFor="let switch of switches; let i = index">
+            <button *ngIf="switch" [ngClass]="{'on': switch}" (click)="toggle(i)">ON</button>
+            <button *ngIf="!switch" [ngClass]="{'on': switch}" (click)="toggle(i)">OFF</button>
+          </div>
+      </div>
+    </body>
+  </html>
+    

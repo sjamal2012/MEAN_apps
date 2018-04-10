@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Survey</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <form action='/result' method='post'>
+            <h1>Input User Info</h1>
+            <div class="names">
+                <p>Your Name: </p>
+                <p>Dojo Location: </p>
+                <p>Favorite Language: </p>
+            </div>
+            <div class="inputs">
+                <p><input type='text' name='name'></p>
+                <p><select class="" name="location">
+                    <option value="Online">Online</option>
+                    <option value="San Jose">San Jose</option>
+                </select></p>
+                <p><select class="" name="language">
+                    <option value="Python">Python</option>
+                    <option value="JavaScript">JavaScript</option>
+                </select></p>
+            </div>
+
+            <p class="comment">Comment (optional):</p>
+            <p><textarea name="comment"></textarea></p>
+            <p class="button"><input type='submit' value='Show User'></p>
+        </form>
+    </body>
+</html>

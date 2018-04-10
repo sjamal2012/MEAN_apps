@@ -1,0 +1,53 @@
+
+body{
+    font-family: Georgia;
+    width: 424px;
+    padding: 20px;
+    margin:auto;
+    margin-top: 20px;
+}
+.show{
+    font-family: Georgia;
+    width: 380px;
+    border: 2px solid black;
+    padding: 20px;
+    margin:auto;
+    margin-top: 20px;
+}
+.server_info{
+    background-color: #9effdb;
+    border: 2px solid black;
+    font-family: Georgia;
+    font-style: italic;
+    width: 380px;
+    padding: 20px;
+    margin:auto;
+    margin-top: 20px;
+}
+
+div{
+    width:180px;
+    display:inline-block;
+    margin:auto;
+}
+.comment{
+    margin:0px;
+}
+.button{
+    text-align: right;
+    margin-bottom: 0px;
+}
+h2{
+    text-decoration: underline;
+}
+select{
+    width:173px;
+}
+textarea{
+    width: 250px;
+    min-height: 70px;
+    overflow: hidden;
+}
+p{
+    word-break:break-all;
+}

@@ -1,0 +1,6 @@
+<h1>Quotes List</h1>
+{{ quotes }}
+<div class="quotes" *ngFor='let quote of quotes; let i = index'>
+  <p class="quote">"{{ quotes[i].quote }}"</p>
+  <p class="author"> - {{ quotes[i].author }}</p>
+</div>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Ninja RPG</title>
+    </head>
+    <body>
+        <script type="text/javascript">
+        class Ninja {
+            constructor(name){
+                this.name = name;
+                this.health = 100;
+                let speed = 3;
+                let strength = 3;
+
+                this.drinkShake = function(){
+                    this.health += 10;
+                    return this;
+                }
+                this.sayName = function(){
+                    console.log(`My name is ${this.name}`);
+                }
+                this.showStats = function(){
+                    console.log(`Name: ${this.name}, Health: ${this.health}, Speed: ${speed}, Strength: ${strength}`);
+                }
+                this.punch = function(punchee){
+                    if (punchee instanceof Ninja){
+                        punchee.health -= 5;
+                        console.log(`${punchee.name} was punched by ${this.name} and lost 5 Health!`);
+                        return punchee.health;
+                    }
+                    else {
+                        console.error("Error: not an instance of Ninja", );
+                    }
+                }
+                this.kick = function(kickee){
+                        if (kickee instanceof Ninja){
+                            let damage = (15 * strength)
+                            kickee.health -= damage
+                            console.log(`${kickee.name} was kicked by ${this.name} and lost ${damage} Health!`);
+                            return kickee.health;
+                        }
+                        else{
+                            console.error("Error: not an instance of Ninja");
+                        }
+                    }
+            }
+            get speed(){
+                return this.speed;
+            }
+            get strength(){
+                return this.strength;
+            }
+        };
+
+        const blueNinja = new Ninja("Goemon");
+        const redNinja = new Ninja("Bill Gates");
+        blueNinja.showStats()
+
+        console.log(blueNinja.health);
+        redNinja.punch(blueNinja);
+        console.log(blueNinja.health)
+        // -> "Goemon was punched by Bill Gates and lost 5 Health!"
+        blueNinja.kick(redNinja);
+        console.log(redNinja.health);
+        // ->"Bill Gates was kicked by Goemon and lost 15 Health!"
+        </script>
+    </body>
+</html>

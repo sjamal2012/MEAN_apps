@@ -1,0 +1,54 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+h4{
+  margin: 5px 0px;
+}
+.scores{
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  height: 142px;
+  margin: 0px 10px;
+  padding: 0px 10px 10px 10px;
+  position: static;
+}
+.player{
+  vertical-align: top;
+  display: inline-block;
+  width: 45%;
+  height: 142px;
+  margin: 0px 10px;
+  border: 2px solid black;
+  text-align: center;
+  padding: 0px 10px 10px 10px;
+  position: static;
+}
+img{
+  display: inline-block;
+  height: 80%;
+}
+.button{
+  text-align: center;
+}
+.results_button{
+  outline: none;
+  color: white;
+  font-weight: bold;
+  padding: 5px;
+  margin-top: 20px;
+  background-color: black;
+  width: 20%;
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px black;
+  display: inline-block;
+}
+.first{
+  margin: 0px 0px 5px 0px;
+  color: rgb(20, 194, 156);
+}
+.second{
+  margin-bottom: 5px;
+  color: red;
+}

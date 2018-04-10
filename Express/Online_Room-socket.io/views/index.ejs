@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+       <title>Group Chat</title>
+       <link rel="stylesheet" href="style.css">
+    </head>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type ="text/javascript">
+        $(document).ready(function (){
+            var name = prompt('Please input your full name')
+            // this triggers the connection event in our server!
+            var socket = io.connect();
+            // we'll write all the socket stuff after the above line!
+
+            console.log("adding new user...");
+            socket.emit('got_new_user', {name: name})
+            socket.on('display_new_user', function(data){
+                console.log("new user: " + data.new_user_name);
+                let user = document.createElement('div');
+                user.setAttribute('class', "new_user");
+                user.setAttribute('id', data.id)
+
+                let username = document.createElement('h2');
+                username.setAttribute('class', 'username')
+                username.innerText = data.new_user_name;
+
+                let smiley = document.createElement('h4');
+                smiley.setAttribute('class', 'smiley');
+                smiley.innerText = ":D"
+
+                user.appendChild(username);
+                user.appendChild(smiley);
+
+                $('#chat_room').append(user)
+                $('#'+data.id).hide().fadeIn()
+            })
+            socket.on('display_group_chat', function(data){
+                console.log(data.users);
+                for (var i = 0; i < data.users.length; i++) {
+                    if (data.users[i].id == data.id){
+                        console.log("Welcome to the chat room " + data.users[i].new_user_name);
+
+                    }
+                    else {
+                        let user = document.createElement('div');
+                        user.setAttribute('class', "new_user");
+                        user.setAttribute('id', data.users[i].id)
+
+                        let username = document.createElement('h2');
+                        username.setAttribute('class', 'username')
+                        username.innerText = data.users[i].new_user_name;
+
+                        let smiley = document.createElement('h4');
+                        smiley.setAttribute('class', 'smiley');
+                        smiley.innerText = ":D"
+
+                        user.appendChild(username);
+                        user.appendChild(smiley);
+
+                        $('#chat_room').hide().append(user).fadeIn()
+                    }
+                }
+                console.log(data.id);
+            })
+            socket.on('disconnect_user', function(id){
+                $('#'+id).fadeOut();
+                console.log("disconnected user");
+            })
+        })
+    </script>
+    <body>
+        <h1>Epic Online Hangout Room<hr></h1>
+        <div class="chat_room" id="chat_room"></div>
+    </body>
+</html>

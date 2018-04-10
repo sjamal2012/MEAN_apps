@@ -1,0 +1,57 @@
+
+body{
+    font-family: Georgia;
+    padding: 30px;
+    width: 1070px;
+    min-height: 200px;
+    margin:auto;
+    margin-top: 20px;
+    border: 2px solid black;
+    text-align: center;
+}
+.names{
+    width: 350px;
+    margin:auto;
+}
+hr{
+    border: 2px solid black;
+    border-radius: 40%;
+}
+div{
+    width:180px;
+    display:inline-block;
+    margin:auto;
+}
+.chat_room{
+    width: 1000px;
+    min-height: 836.05px;
+    margin:auto;
+}
+.new_user{
+    border: 2px solid black;
+    height:180px;
+    width:260px;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+}
+.button{
+    text-align: right;
+    margin-bottom: 0px;
+}
+.username{
+    color:white;
+    font-weight: normal;
+    border-radius: 5px;
+    background: gray;
+    padding: 5px 10px;
+    margin: 0px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+h4{
+    font-size: 40px;
+    text-align: center;
+}

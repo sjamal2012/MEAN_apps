@@ -1,0 +1,13 @@
+form{
+  display:inline-block;
+  text-align: right;
+}
+div.errors{
+  padding:20px;
+  color:red;
+  font-style: italic;
+  width: 280px;
+  height: 170px;
+  vertical-align: top;
+  display: inline-block;
+}

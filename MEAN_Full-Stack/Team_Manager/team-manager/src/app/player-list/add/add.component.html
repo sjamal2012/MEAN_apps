@@ -1,0 +1,34 @@
+<fieldset>
+    <h1>Add Player</h1>
+    <form #formData='ngForm' (submit)='create()'>
+      <table>
+        <tr>
+          <td><label for="newPlayer.name">Player Name: </label></td>
+          <td>
+            <input
+            name='newPlayer.name'
+            type="text"
+            [(ngModel)]='newPlayer.name'
+            #nameData='ngModel'
+            required
+            minlength="2"
+            ></td>
+            <td>
+              <p class='error' *ngIf='!nameData.valid'>name must be at least 2 char</p>
+              <h5 class='check' *ngIf='nameData.valid'>✔</h5>
+            </td>
+        </tr>
+        <tr>
+          <td><label for="newPlayer.pref">Preferred Position</label></td>
+          <td><input
+            name='newPlayer.pref'
+            type="text"
+            [(ngModel)]='newPlayer.pref'
+            #positionData='ngModel'
+            ></td>
+        </tr>
+      </table>
+      <p class='submit'><input type="submit" [disabled]='!formData.valid' value="Create"></p>
+    </form>
+</fieldset>
+  

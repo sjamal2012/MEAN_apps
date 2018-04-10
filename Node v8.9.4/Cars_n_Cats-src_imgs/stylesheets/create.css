@@ -1,0 +1,53 @@
+
+body{
+    margin:auto;
+    margin-top: 10px;
+    width: 500px;
+    border: 2px solid black;
+    padding: 20px;
+    font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+div{
+    width:180px;
+    display:inline-block;
+    margin:auto;
+    min-height: 155px;
+}
+.names{
+    vertical-align: top;
+    max-height: 191px;
+}
+.comment{
+    margin:0px;
+}
+.button{
+    text-align: right;
+}
+.login_button{
+    text-align: center;
+    margin-left: 200px;
+}
+p{
+    line-height: 30px;
+}
+h2{
+    text-decoration: underline;
+}
+select{
+    width:173px;
+}
+td{
+    width: 180px;
+}
+td input{
+    margin: 5px;
+}
+.success{
+    color:green;
+}
+.login_body{
+    width: 970px;
+    margin:auto;
+    border:none;
+}

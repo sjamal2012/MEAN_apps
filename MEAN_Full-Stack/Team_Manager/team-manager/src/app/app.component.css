@@ -1,0 +1,20 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.seperator{
+  color: black;
+  text-align: center;
+  display: inline-block;
+  font-weight: bold;
+  font-size: 20px;
+  width: 10px;
+}
+fieldset{
+  width: 900px;
+  margin: auto;
+}
+a{
+  font-weight: bold;
+  color: rgb(117, 80, 187);
+  font-size: 20px;
+}

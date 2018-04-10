@@ -1,0 +1,11 @@
+<html>
+    <title>Power Levels</title>
+    <body>
+      <h3>SuperSaiyanThreeComponent</h3>
+      <br>
+      <p class='power_level'>Power Level: <span *ngIf='power_data.submitted'>{{ power_data.power * 250 }}</span></p>
+      <p class="quote"*ngIf='power_data.power*250 > 9000 && power <= 20000 && power_data.submitted'>"Over 9000!"</p>
+      <p class="quote"*ngIf='power_data.power*250 > 20000 && power != 50000 && power_data.submitted'>"Superlative!"</p>
+      <p class="quote"*ngIf='power_data.power*250 == 50000 && power_data.submitted'>"The One"</p>
+    </body>
+  </html>

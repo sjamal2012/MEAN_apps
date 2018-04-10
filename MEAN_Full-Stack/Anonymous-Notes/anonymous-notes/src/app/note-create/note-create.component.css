@@ -1,0 +1,9 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+fieldset{
+  padding: 10px;
+}
+input[type='text']{
+  width: 85%;
+}

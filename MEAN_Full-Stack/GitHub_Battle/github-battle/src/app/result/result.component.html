@@ -1,0 +1,13 @@
+<div class='scores'>
+  <h1 class='first'>1st Place</h1>
+  <h4 class='first'>{{ winner.username }} (Score: {{ winner.score }})</h4>
+  <h1 class='second'>2nd Place</h1>
+  <h4 class='second'>{{ loser.username }} (Score: {{ loser.score }})</h4>
+</div>
+<div class='player'>
+  <img src="http://res.cloudinary.com/lebspec/image/upload/v1521051661/bust-in-silhouette_1f464_rhjpfs.png" alt="user"><br>
+  {{ winner.username }}
+</div>
+<div class='button'>
+    <button class='results_button' (click)='reset()' [routerLink]="['reset']">Reset</button>
+</div>

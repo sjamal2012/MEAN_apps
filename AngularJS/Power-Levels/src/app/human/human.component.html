@@ -1,0 +1,11 @@
+<html>
+    <title>Power Levels</title>
+    <body>
+      <h3>HumanComponent</h3>
+      <br>
+      <p class='power_level'>Power Level: <span *ngIf='power_data.submitted'>{{ power_data.power }}</span></p>
+      <p class="quote"*ngIf='power_data.power > 9000 && power_data.power <= 20000'>"Over 9000!"</p>
+      <p class="quote"*ngIf='power_data.power > 20000 && power_data.power != 50000'>"Superlative!"</p>
+      <p class="quote"*ngIf='power_data.power == 50000'>"The One"</p>
+    </body>
+  </html>

@@ -1,0 +1,17 @@
+<h1>Add a Quote</h1>
+<form #formData='ngForm' novalidate (ngSubmit)='onSubmit(formData.value)'>
+  <textarea name="quote" id="quote" cols="80" rows="5" required minlength="4" #q='ngModel'  [(ngModel)]='quote'></textarea>
+  <br>
+  <br>
+  <label for="author">Author: </label><input type="text" name="author" #a='ngModel' required minlength="1" [(ngModel)]='author'>
+  <br><br>
+  <input type="submit" value="Add Quote" [disabled]='!formData.valid'>
+</form>
+<div class="errors" *ngIf='!formData.valid'>
+  <p *ngIf='!q.valid'>
+      quote is required (min 4 characters)
+  </p>
+  <p *ngIf='!a.valid'>
+    author name is required
+  </p>
+</div>

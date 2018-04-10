@@ -1,0 +1,18 @@
+<fieldset>
+  <table>
+    <thead>
+      <tr>
+        <th class="player_name">Player Name</th>
+        <th class="preferred_position">Preferred Position</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <tr *ngFor='let player of team, let i = index'>
+      <td>{{ player.name }}</td>
+      <td>{{ player.pref }}</td>
+      <td>
+        <button (click)='delete(player._id)'>Delete</button>
+      </td>
+    </tr>
+  </table>
+</fieldset>

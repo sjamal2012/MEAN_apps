@@ -1,0 +1,24 @@
+<fieldset>
+  <div>
+    <a (click)='show_game(0)'>Game 1<p class="seperator">|</p></a>
+    <a (click)='show_game(1)'>Game 2<p class="seperator">|</p></a>
+    <a (click)='show_game(2)'>Game 3</a>
+  </div>
+  <table>
+    <thead>
+      <tr>
+        <th class="player_name">Player Name</th>
+        <th class="actions">Actions</th>
+      </tr>
+    </thead>
+    <tr *ngFor='let player of team, let i = index'>
+      <td>{{ player.name }}</td>
+      <td>
+        <button [ngClass]="{'yes': game[i].playing}" (click)='playing(i)'>Playing</button>
+        <button [ngClass]="{'no': game[i].not_playing}" (click)='not_playing(i)'>Not Playing</button>
+        <button [ngClass]="{'maybe': game[i].undecided}" (click)='undecided(i)'>Undecided</button>
+      </td>
+    </tr>
+  </table>
+</fieldset>
+    

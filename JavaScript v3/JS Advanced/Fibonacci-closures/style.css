@@ -1,0 +1,22 @@
+*{
+    /* padding: 0px;
+    margin: 0px; */
+    font-family: "Georgia";
+}
+body{
+    width:400px;
+    margin:auto;
+    text-align: center;
+}
+div.display_name{
+    font-style: italic;
+    display:inline-block;
+    margin-top: 10px;
+    border-radius: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0px 20px;
+}
+h4{
+    font-weight:100;
+}

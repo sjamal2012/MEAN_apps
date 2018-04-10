@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Counter</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type ="text/javascript" src="/socket.io/socket.io.js"></script>
+        <script type ="text/javascript">
+            $(document).ready(function (){
+                // this triggers the connection event in our server!
+                var socket = io.connect();
+                // we'll write all the socket stuff after the above line!
+                $('#add_1').click(function (){
+                    console.log("clicked add_1");
+                    let count = document.getElementsByTagName('p')[0].innerText
+                    socket.emit( "posting_form", {count: count, change: 1});
+                });
+                $('#add_2').click(function (){
+                    console.log("clicked add_2");
+                    let count = document.getElementsByTagName('p')[0].innerText
+                    socket.emit( "posting_form", {count: count, change: 2});
+                });
+                $('#reset').click(function (){
+                    socket.emit( "posting_form", {count: 0});
+                });
+                socket.on('updated_count', function (data){
+                    console.log("updating count");
+                    let msg = document.createElement('p')
+                    msg.innerText = data.count;
+                    console.log(data.count);
+                    $('#count_div').html(msg)
+                });
+             })
+       </script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <h1>Counter App</h1>
+            <div class="count" id="count_div">
+                <p>0</p>
+            </div>
+            <button class="refresh" id="add_1">Add 1</button>
+            <button id="add_2">Add 2</button>
+            <button id="reset">Reset</button>
+        </div>
+    </body>
+</html>
