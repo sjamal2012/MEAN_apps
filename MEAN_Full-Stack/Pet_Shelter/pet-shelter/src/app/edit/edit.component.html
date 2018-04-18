@@ -1,0 +1,97 @@
+<h3 class='main_header'>Editing pet, <span>{{ pet.name }}</span></h3>
+<p class="error" *ngIf='error.length > 0'>{{ error }}<br></p>
+<form id='pet_form' #formData='ngForm' (submit)='update_pet({"pet_id":pet._id, "new_pet": formData.value})' class="add_form">
+  <table>
+    <tr>
+      <td><label for="pet.name">Pet Name:</label></td>
+      <td>
+        <input
+        type="text"
+        name="name"
+        required
+        minlength="3"
+        [(ngModel)]='pet.name'
+        #name='ngModel'
+        [value]='pet.name'
+      ></td>
+      <td class='td_error'>
+        <h5 class='error' *ngIf='!name.valid && name.value.length > 0'>must be 3 char</h5>
+        <h5 class='check' *ngIf='name.valid && name.value != null'>✔</h5>
+      </td>
+    </tr>
+    <tr>
+      <td><label for="pet.type">Pet Type:</label></td>
+      <td>
+        <input
+        type="text"
+        name="type"
+        required
+        minlength="3"
+        [(ngModel)]='pet.type'
+        #type='ngModel'
+        [value]='pet.type'
+        ></td>
+        <td class='td_error'>
+          <h5 class='error' *ngIf='!type.valid && type.value.length > 0'>must be 3 char</h5>
+          <h5 class='check' *ngIf='type.valid && type.value != null'>✔</h5>
+        </td>
+    </tr>
+    <tr>
+      <td><label for="pet.description">Description:</label></td>
+      <td>
+        <input
+        type="text"
+        name="description"
+        required
+        minlength="3"
+        [(ngModel)]='pet.description '
+        #description='ngModel'
+        [value]='pet.description'
+        ></td>
+        <td class='td_error'>
+           <h5 class='error' *ngIf='!description.valid && description.value.length > 0'>must be 3 char</h5>
+          <h5 class='check' *ngIf='description.valid && description.value != null'>✔</h5>
+        </td>
+    </tr>
+    <tr>
+      <td><p class='skills_head'>Skills:</p></td>
+    </tr>
+    <tr>
+      <td class='skills_td'><label for="pet.skills[0]">Skill 1:</label></td>
+      <td>
+        <input
+        type="text"
+        name="skills0"
+        [(ngModel)]='pet.skills[0]'
+        #skill1='ngModel'
+        [value]='pet.skills[0]'
+        ></td>
+    </tr>
+    <tr>
+      <td class='skills_td'><label for="pet.skills[1]">Skill 2:</label></td>
+      <td>
+        <input
+        type="text"
+        name='skills1'
+        [(ngModel)]='pet.skills[1]'
+        #skills2='ngModel'
+        [value]='pet.skills[1]'
+        ></td>
+    </tr>
+    <tr>
+      <td class='skills_td'><label for="pet.skills[2]">Skill 3:</label></td>
+      <td>
+        <input
+        type="text"
+        name='skills2'
+        [(ngModel)]='pet.skills[2]'
+        #skills3='ngModel'
+        [value]='pet.skills[2]'
+        ></td>
+    </tr>
+  </table>
+  <p class="submit_p">
+    <input class='add-pet_button' [disabled]="!formData.valid" type='submit' value='Update Pet'>
+    <button class='cancel_button' [routerLink]="['/']">Cancel</button>
+  </p>
+</form>

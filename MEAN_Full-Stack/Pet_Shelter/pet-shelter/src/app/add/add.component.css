@@ -1,0 +1,89 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+}
+.main_header{
+  margin-left: 10px;
+}
+.add_form{
+  font-size: 20px;
+  padding: 20px 20px 0px 20px;
+  background-color: rgb(255, 255, 255, 0.6);
+  border: 2px solid black;
+  vertical-align: top;
+  width: 90%;
+  margin: auto;
+  margin-bottom: 10px;
+}
+td {
+  width: 150px;
+}
+#pet_form table input{
+  width: 300px;
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 5px;
+}
+h5.check{
+  display: inline-block;
+  line-height: 100%;
+  color: rgb(22, 102, 89);
+  font-size: 13px;
+  width: 100px;
+  margin: 5px 0px;
+}
+h5.error{
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0px;
+  color: red;
+  font-weight: normal;
+  height: 100%;
+}
+p.error{
+  margin-left: 20px;
+  color: red;
+  font-style: italic;
+}
+.td_error{
+  display: inline-block;
+  padding: 8px 0px;
+  height:24px;
+}
+.add-pet_button{
+  width: 150px;
+  margin: 0px 5px;
+  padding: 5px;
+  color: white;
+  background: rgb(56, 99, 179);
+  border: 2px solid black;
+  box-shadow: 1px 1px 2px solid black;
+  cursor: pointer;
+}
+input:disabled{
+  color: rgb(185, 183, 183);
+}
+.cancel_button{
+  width: 150px;
+  margin: 0px 5px;
+  padding: 5px;
+  color: white;
+  background:rgb(126, 126, 126);
+  border: 2px solid black;
+  box-shadow: 1px 1px 2px solid black;
+  cursor: pointer;
+}
+.submit_p{
+  width: 100%;
+  text-align: center;
+}
+.skills_head{
+  margin-bottom: 5px;
+}
+.skills_td{
+  display:inline-block;
+  padding: 8px 0px;
+  width: 100px;
+  margin-left: 40px;
+}

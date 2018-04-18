@@ -1,0 +1,20 @@
+<div class='list_all_wrap'>
+  <label for='search'>Search:</label>
+  <input class='input_search' name='search' [(ngModel)]='query'><br><br>
+  <div class='list_all_bike_wrap'>
+    <h2 *ngIf='bikes.length == 0'>No bikes have been listed.</h2>
+    <div class="list_all_bicycle" *ngFor='let bike of bikes | search: "title":query'>
+      <img class='list_all_img' [src]='bike.img' alt="bike">
+      <div class="list_all_bike_head">
+        <h1>{{ bike.title }}</h1>
+        <p>{{ bike.description }}</p>
+      </div>
+      <div class="list_all_info">
+        <h1 class='center'>${{ bike.price }}</h1>
+        <p class='center'>{{ bike.city }}, {{ bike.state }}</p>
+        <button *ngIf='user_id == bike._user' class='list_all_delete' (click)='delete(bike._id)'>Delete</button>
+        <button *ngIf='user_id != bike._user' class='list_all_contact' (mouseenter)='hover(bike._user)' (click)='contact()'>Contact</button>
+      </div>
+    </div>
+  </div>
+</div>

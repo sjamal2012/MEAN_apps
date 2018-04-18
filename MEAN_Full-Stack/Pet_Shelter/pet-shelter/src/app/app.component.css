@@ -1,0 +1,38 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+}
+fieldset{
+  border: none;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  width: 1200px;
+  margin: auto;
+  vertical-align: middle;
+}
+.description{
+  display: inline-block;
+  vertical-align: top;
+  height: 320px;
+  width: 18%;
+  text-align: center;
+}
+#right{
+  padding: 65px 0px;
+}
+#left{
+  padding: 25px 0px;
+}
+.shelter_wrap{
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 20px;
+  background-color: rgba(216, 158, 192, 0.7);
+  padding: 0px 20px 20px 20px;
+  width: 700px;
+  vertical-align: middle;
+}
+.main_header{
+  text-align: left;
+  margin-left: 10px;
+}

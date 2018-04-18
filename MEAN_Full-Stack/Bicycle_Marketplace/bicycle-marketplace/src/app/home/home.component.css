@@ -1,0 +1,170 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.home_bicycle{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background-color: rgb(241, 241, 241, 0.6);
+  padding: 10px 20px;
+}
+.home_bike_head{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.home_info{
+  display:inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+}
+.home_img{
+  width: 25%;
+  margin: 20px;
+}
+.errors{
+  text-align: left;
+  color: red;
+  font-style: italic;
+  line-height: normal;
+}
+.home_form_headers{
+  text-align: left;
+}
+.p_error{
+  color:red;
+  font-style: italic;
+  margin-left: 30px;
+  line-height: normal;
+}
+.placeholder{
+  font-style: italic;
+  color: white;
+  line-height: normal;
+}
+p.home_logout{
+  display:block;
+  text-align: right;
+}
+.form_wrap{
+  text-align: center;
+  padding-bottom: 20px;
+}
+.login_form{
+  display:inline-block;
+  border: 2px solid black;
+  width: 450px;
+  border-radius: 10px;
+  vertical-align: top;
+  padding-left: 10px;
+  text-align: left;
+}
+.register_form{
+  padding-left: 10px;
+  display:inline-block;
+  border: 2px solid black;
+  width: 450px;
+  border-radius: 10px;
+  vertical-align: top;
+  margin-left: 10px;
+  margin-bottom: 10px;
+}
+h4 a{
+  font-size: 14px;
+}
+div.bike_of_the_day{
+  text-align: left;
+  display: block;
+  min-height: 155px;
+  margin-bottom: 30px;
+}
+.bike_headline{
+  margin-left: 50px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: rgb(43, 9, 107);
+}
+.names{
+  vertical-align: top;
+  max-height: 191px;
+}
+.comment{
+  margin:0px;
+}
+.button{
+  text-align: right;
+  border: 2px solid black;
+  box-shadow: 1px 1px 2px solid black;
+}
+.reg-log_button{
+  text-align: center;
+  margin-left: 200px;
+}
+.reg-log_button2{
+  text-align: center;
+  margin-left: 150px;
+}
+.home_buttons{
+  cursor: pointer;
+}
+p{
+  line-height: 30px;
+}
+td{
+  width: 180px;
+  text-align: left;
+}
+td input{
+  margin: 5px;
+  width:166.22px;
+}
+td input[type='submit']{
+  width: auto;
+
+}
+.login_body{
+  width: 970px;
+  margin:auto;
+  border:none;
+}
+h5.check{
+  display: inline-block;
+  line-height: 100%;
+  color: rgb(22, 102, 89);
+  font-size: 13px;
+  width: 100px;
+  margin: 5px 0px;
+}
+.error{
+  display: inline-block;
+  line-height: 100%;
+  width: 100px;
+  font-size: 13px;
+  margin: 12px 0px;
+  color: white;
+  margin: 5px 0px;
+}
+.register_inputs{
+  display: inline-block;
+  width: 150px;
+}
+form.ng-dirty h5.error{
+  color: red;
+  font-weight: normal;
+}
+.td_error{
+  display: inline-block;
+  width:120px;
+}
+form.ng-clean h5{
+  color: black;
+  font-weight: normal;
+}
+p.submit{
+  width: 100%;
+  text-align: center;
+}

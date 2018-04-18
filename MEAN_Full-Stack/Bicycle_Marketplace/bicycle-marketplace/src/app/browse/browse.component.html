@@ -1,0 +1,6 @@
+<div class='router'>
+    <a [routerLink]="['list']">Browse<p class="seperator">|</p></a>
+    <a [routerLink]="['my_dash']">My Listings<p class="seperator">|</p></a>
+    <a (click)='logout()' [routerLink]="['logout']">Log Off</a>
+</div>
+<router-outlet></router-outlet>

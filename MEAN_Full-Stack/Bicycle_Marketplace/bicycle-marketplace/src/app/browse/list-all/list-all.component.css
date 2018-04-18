@@ -1,0 +1,70 @@
+*{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  outline: none;
+}
+.list_all_wrap{
+  padding: 50px;
+  border-bottom: 2px solid black;
+}
+.input_search{
+  width: 92%;
+}
+.list_all_bike_wrap{
+  border-radius: 20px;
+  background-color: rgba(97, 190, 172, 0.5);
+  padding: 10px 20px;
+  overflow-y: auto;
+  max-height: 700px;
+  border: 2px solid black;
+}
+.list_all_bicycle{
+  width: 90%;
+  margin: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border: 2px solid black;
+  background-color: rgb(241, 241, 241, 0.6);
+  padding: 10px 20px;
+}
+.list_all_bike_head{
+  display: inline-block;
+  width: 50%;
+  vertical-align: top;
+}
+.list_all_info{
+  display:inline-block;
+  text-align: center;
+  vertical-align: top;
+  width: 150px;
+}
+.center{
+  text-align: center;
+}
+.list_all_delete{
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px black;
+  text-align: center;
+  display:inline-block;
+  padding: 10px 20px;
+  background-color: rgb(212, 21, 21);
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+}
+.list_all_contact{
+  border: 2px solid black;
+  border-radius: 20px;
+  box-shadow: 1px 2px 2px black;
+  text-align: center;
+  display:inline-block;
+  padding: 10px 20px;
+  background-color: rgb(255, 251, 23);
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  cursor: pointer;
+}
+.list_all_img{
+  width: 25%;
+  margin: 20px;
+}

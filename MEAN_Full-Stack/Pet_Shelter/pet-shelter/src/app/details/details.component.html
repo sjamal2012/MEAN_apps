@@ -1,0 +1,26 @@
+<div class='detail_wrap'>
+    <h3 class='main_header'>Details about <span>{{ pet.name }}</span></h3>
+    <div class="detail_div">
+        <h4>Pet Type:</h4>
+        <p>{{ pet.type }}</p>
+    </div>
+    <div class="detail_div">
+        <h4>Description:</h4>
+        <p>{{ pet.description }}</p>
+    </div>
+    <div class="detail_div">
+        <h4>Skills:</h4>
+        <div class='skill_div'>
+          <p *ngFor='let skill of pet.skills'>{{ skill }}</p>
+        </div>
+    </div>
+    <div class="detail_div">
+        <h4>Likes:</h4>
+        <p>{{ pet.likes }}</p>
+    </div>
+    <p class="submit_p">
+      <button class='like_button' [disabled]='liked' (click)='add_like(pet._id)'>Like this pet!</button>
+      <button class='adopt_button' (click)='adopt(pet._id)'>Adopt this pet!</button><br><br>
+      <button class='home_button' [routerLink]="['/']">Return to Shelter</button>
+    </p>
+</div>
