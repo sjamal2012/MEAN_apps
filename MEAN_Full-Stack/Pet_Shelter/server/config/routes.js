@@ -1,4 +1,5 @@
 const petController = require('../controllers/pets.js');
+const path = require('path');
 
 module.exports = function(app){
   app 
@@ -9,6 +10,6 @@ module.exports = function(app){
   .post('/update/:id', petController.update)
   .delete('/delete/:id', petController.delete)
   .all("*", (req,res,next) => {
-    res.sendFile(path.resolve("../pet-shelter/dist/index.html"))
+    res.sendFile(path.resolve("./pet-shelter/dist/index.html"))
   });
 }
