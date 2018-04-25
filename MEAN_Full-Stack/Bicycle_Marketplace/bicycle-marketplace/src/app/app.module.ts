@@ -15,7 +15,7 @@ import { ListAllComponent } from './browse/list-all/list-all.component';
 import { ListMyComponent } from './browse/list-my/list-my.component';
 import { SearchPipe } from './filter.pipe';
 
-@NgModule({
+@NgModule({ 
   declarations: [
     AppComponent,
     HomeComponent,
